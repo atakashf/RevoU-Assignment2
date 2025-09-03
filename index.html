@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RevoFun Gaming - Interactive Browser Games</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <div class="logo">
+          <a href="/index.html" class="nav-link"><h1>RevoFun</h1></a>
+        </div>
+        <ul class="nav-menu">
+          <li>
+            <a
+              href="/Games/number-guessing/number-guessing.html"
+              class="nav-link"
+              >Number Game</a
+            >
+          </li>
+          <li>
+            <a href="/Games/memory-card/memory-card.html" class="nav-link"
+              >Memory Cards</a
+            >
+          </li>
+          <li>
+            <a
+              href="/Games/rock-paper-scissors/rock-paper-scissors.html"
+              class="nav-link"
+              >Rock Paper Scissors</a
+            >
+          </li>
+        </ul>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main-content">
+      <section id="home" class="section active">
+        <div class="hero">
+          <div class="hero-content">
+            <h1 class="hero-title">
+              Welcome to <span class="highlight">RevoFun Gaming</span>
+            </h1>
+            <p class="hero-description">
+              Experience the thrill of classic games reimagined for the modern
+              web. Challenge yourself with our collection of interactive
+              browser-based games designed for casual gamers who love
+              entertainment on the go.
+            </p>
+            <div class="cta-buttons">
+              <a
+                href="/Games/number-guessing/number-guessing.html"
+                class="btn btn-primary"
+                >Start Playing</a
+              >
+              <button class="btn btn-secondary" onclick="scrollToGames()">
+                Browse Games
+              </button>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <div class="floating-elements">
+              <div class="game-icon">🎮</div>
+              <div class="game-icon">🎯</div>
+              <div class="game-icon">🧠</div>
+              <div class="game-icon">✂️</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="games-preview" id="games-preview">
+          <h2 class="section-title">Our Games Collection</h2>
+          <div class="games-grid">
+            <a
+              href="/Games/number-guessing/number-guessing.html"
+              class="game-card"
+            >
+              <div class="game-icon-large">🎯</div>
+              <h3>Guess the Number</h3>
+              <p>
+                Test your intuition! Can you guess the secret number in 10
+                tries?
+              </p>
+              <div class="difficulty">Easy - Medium</div>
+            </a>
+            <a href="/Games/memory-card/memory-card.html" class="game-card">
+              <div class="game-icon-large">🧠</div>
+              <h3>Memory Cards</h3>
+              <p>Challenge your memory by matching pairs of hidden cards!</p>
+              <div class="difficulty">Medium</div>
+            </a>
+            <a
+              href="/Games/rock-paper-scissors/rock-paper-scissors.html"
+              class="game-card"
+            >
+              <div class="game-icon-large">✂️</div>
+              <h3>Rock Paper Scissors</h3>
+              <p>The classic game! Best of 3 rounds against our AI opponent.</p>
+              <div class="difficulty">Easy</div>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <p>&copy; 2025 RevoFun Gaming. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="/script.js"></script>
+  </body>
+</html>

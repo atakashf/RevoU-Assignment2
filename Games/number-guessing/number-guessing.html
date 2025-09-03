@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess the Number - RevoFun Gaming</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <div class="logo">
+          <a href="/index.html" class="nav-link"><h1>RevoFun</h1></a>
+        </div>
+        <ul class="nav-menu">
+          <li>
+            <a
+              href="/Games/number-guessing/number-guessing.html"
+              class="nav-link"
+              >Number Game</a
+            >
+          </li>
+          <li>
+            <a href="/Games/memory-card/memory-card.html" class="nav-link"
+              >Memory Cards</a
+            >
+          </li>
+          <li>
+            <a
+              href="/Games/rock-paper-scissors/rock-paper-scissors.html"
+              class="nav-link"
+              >Rock Paper Scissors</a
+            >
+          </li>
+        </ul>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main-content">
+      <section id="guess-the-number" class="section active game-section">
+        <div id="player-name-input" class="player-name-input">
+          <h2>Enter Your Name</h2>
+          <input type="text" id="ng-player-name" placeholder="Your Name" />
+          <button class="btn btn-primary" id="ng-start-btn">Start Game</button>
+          <span id="ng-player-name-display"></span>
+          <span id="ng-attempts-left"></span>
+          <span id="ng-current-score"></span>
+        </div>
+
+        <div class="game-wrapper">
+          <div class="game-container hidden" id="game-area">
+            <a href="/index.html" class="back-btn">← Back to Home</a>
+
+            <div class="game-header">
+              <h2>🎯 Guess the Number</h2>
+              <p class="game-instructions">
+                I'm thinking of a number between 1 and 100. Can you guess it in
+                10 tries?
+              </p>
+            </div>
+
+            <div class="game-content">
+              <div class="game-stats">
+                <div class="stat">
+                  <span class="stat-label">Player:</span>
+                  <span id="player-name-display" class="stat-value"></span>
+                </div>
+                <div class="stat">
+                  <span class="stat-label">Attempts Left:</span>
+                  <span id="attempts-left" class="stat-value">10</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-label">Your Score:</span>
+                  <span id="current-score" class="stat-value">0</span>
+                </div>
+              </div>
+
+              <div class="guess-input-area">
+                <input
+                  type="number"
+                  id="guess-input"
+                  placeholder="Enter your guess (1-100)"
+                  min="1"
+                  max="100"
+                />
+                <button id="guess-btn" class="btn btn-primary">Guess!</button>
+              </div>
+
+              <div id="guess-feedback" class="feedback"></div>
+
+              <div class="previous-guesses">
+                <h4>Previous Guesses:</h4>
+                <div id="guesses-list" class="guesses-container"></div>
+              </div>
+            </div>
+          </div>
+          <div class="game-container hidden" id="game-area"></div>
+
+          <div class="leaderboard-panel hidden" id="leaderboard-panel">
+            <h3>Leaderboard</h3>
+            <ul id="leaderboard-list" class="leaderboard-list"></ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="game-modal" class="modal hidden" role="dialog" aria-modal="true">
+      <div class="modal-content">
+        <h3 id="modal-title" class="modal-title"></h3>
+        <p id="modal-message" class="modal-message"></p>
+        <div class="modal-actions">
+          <button id="play-again-btn" class="btn btn-primary">
+            Play Again
+          </button>
+          <a href="/index.html" class="btn btn-secondary">Home</a>
+        </div>
+      </div>
+      <div class="modal-backdrop"></div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <p>&copy; 2025 RevoFun Gaming. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="/Games/number-guessing/number-guessing.js"></script>
+  </body>
+</html>

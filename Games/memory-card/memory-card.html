@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory Cards - RevoFun Gaming</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <div class="logo">
+          <a href="/index.html" class="nav-link"><h1>RevoFun</h1></a>
+        </div>
+        <ul class="nav-menu">
+          <li>
+            <a
+              href="/Games/number-guessing/number-guessing.html"
+              class="nav-link"
+              >Number Game</a
+            >
+          </li>
+          <li>
+            <a href="/Games/memory-card/memory-card.html" class="nav-link"
+              >Memory Cards</a
+            >
+          </li>
+          <li>
+            <a
+              href="/Games/rock-paper-scissors/rock-paper-scissors.html"
+              class="nav-link"
+              >Rock Paper Scissors</a
+            >
+          </li>
+        </ul>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main-content">
+      <section id="memory-card-game" class="section active game-section">
+        <div id="player-name-input" class="player-name-input">
+          <h2>Enter Your Name</h2>
+          <input type="text" id="mc-player-name" placeholder="Your Name" />
+          <button class="btn btn-primary" id="mc-start-btn">Start Game</button>
+        </div>
+
+        <div class="game-wrapper">
+          <div class="game-container hidden" id="game-area">
+            <a href="/index.html" class="back-btn">← Back to Home</a>
+
+            <div class="game-header">
+              <h2>🧠 Memory Card Game</h2>
+              <p class="game-instructions">
+                Flip two cards at a time to find matching pairs. Match all pairs
+                to win!
+              </p>
+            </div>
+
+            <div class="game-content">
+              <div class="game-stats">
+                <div class="stat">
+                  <span class="stat-label">Player:</span>
+                  <span id="player-name-display" class="stat-value"></span>
+                </div>
+                <div class="stat">
+                  <span class="stat-label">Moves:</span>
+                  <span id="memory-moves" class="stat-value">0</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-label">Pairs Found:</span>
+                  <span id="pairs-found" class="stat-value">0/8</span>
+                </div>
+              </div>
+
+              <div id="memory-game-board" class="memory-board"></div>
+
+              <div id="memory-feedback" class="feedback"></div>
+            </div>
+          </div>
+
+          <div class="leaderboard-panel hidden" id="leaderboard-panel">
+            <h3>Leaderboard</h3>
+            <ul id="leaderboard-list" class="leaderboard-list"></ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="game-modal" class="modal hidden" role="dialog" aria-modal="true">
+      <div class="modal-content">
+        <h3 id="modal-title" class="modal-title"></h3>
+        <p id="modal-message" class="modal-message"></p>
+        <div class="modal-actions">
+          <button id="play-again-btn" class="btn btn-primary">
+            Play Again
+          </button>
+          <a href="/index.html" class="btn btn-secondary">Home</a>
+        </div>
+      </div>
+      <div class="modal-backdrop"></div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <p>&copy; 2025 RevoFun Gaming. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="/Games/memory-card/memory-card.js"></script>
+  </body>
+</html>

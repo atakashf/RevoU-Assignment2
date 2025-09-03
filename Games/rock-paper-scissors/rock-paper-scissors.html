@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors - RevoFun Gaming</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <div class="logo">
+          <a href="/index.html" class="nav-link"><h1>RevoFun</h1></a>
+        </div>
+        <ul class="nav-menu">
+          <li>
+            <a
+              href="/Games/number-guessing/number-guessing.html"
+              class="nav-link"
+              >Number Game</a
+            >
+          </li>
+          <li>
+            <a href="/Games/memory-card/memory-card.html" class="nav-link"
+              >Memory Cards</a
+            >
+          </li>
+          <li>
+            <a
+              href="/Games/rock-paper-scissors/rock-paper-scissors.html"
+              class="nav-link"
+              >Rock Paper Scissors</a
+            >
+          </li>
+        </ul>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main-content">
+      <section id="rock-paper-scissors" class="section active game-section">
+        <div id="player-name-input" class="player-name-input">
+          <h2>Enter Your Name</h2>
+          <input type="text" id="rps-player-name" placeholder="Your Name" />
+          <button class="btn btn-primary" id="rps-start-btn">Start Game</button>
+        </div>
+
+        <div class="game-wrapper">
+          <div class="game-container hidden" id="game-area">
+            <a href="/index.html" class="back-btn">← Back to Home</a>
+
+            <div class="game-header">
+              <h2>✂️ Rock Paper Scissors</h2>
+              <p class="game-instructions">
+                Best of 3 rounds! Choose your weapon and battle our AI opponent.
+              </p>
+            </div>
+
+            <div class="game-content">
+              <div class="game-stats">
+                <div class="stat">
+                  <span class="stat-label">Player:</span>
+                  <span id="player-name-display" class="stat-value"></span>
+                </div>
+                <div class="stat">
+                  <span class="stat-label">Round:</span>
+                  <span id="current-round" class="stat-value">1/3</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-label">Score:</span>
+                  <span id="rps-score" class="stat-value">You: 0 | AI: 0</span>
+                </div>
+              </div>
+
+              <div class="rps-game-area">
+                <div class="choices">
+                  <button class="choice-btn" data-choice="rock">
+                    <span class="choice-icon">🪨</span>
+                    <span class="choice-name">Rock</span>
+                  </button>
+                  <button class="choice-btn" data-choice="paper">
+                    <span class="choice-icon">📄</span>
+                    <span class="choice-name">Paper</span>
+                  </button>
+                  <button class="choice-btn" data-choice="scissors">
+                    <span class="choice-icon">✂️</span>
+                    <span class="choice-name">Scissors</span>
+                  </button>
+                </div>
+
+                <div class="battle-area">
+                  <div class="player-choice">
+                    <h4>Your Choice</h4>
+                    <div id="player-choice-display" class="choice-display">
+                      ?
+                    </div>
+                  </div>
+                  <div class="vs">VS</div>
+                  <div class="ai-choice">
+                    <h4>AI Choice</h4>
+                    <div id="ai-choice-display" class="choice-display">?</div>
+                  </div>
+                </div>
+              </div>
+
+              <div id="rps-feedback" class="feedback"></div>
+            </div>
+          </div>
+
+          <div class="leaderboard-panel hidden" id="leaderboard-panel">
+            <h3>Leaderboard</h3>
+            <ul id="leaderboard-list" class="leaderboard-list"></ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="game-modal" class="modal hidden" role="dialog" aria-modal="true">
+      <div class="modal-content">
+        <h3 id="modal-title" class="modal-title"></h3>
+        <p id="modal-message" class="modal-message"></p>
+        <div class="modal-actions">
+          <button id="play-again-btn" class="btn btn-primary">
+            Play Again
+          </button>
+          <a href="/index.html" class="btn btn-secondary">Home</a>
+        </div>
+      </div>
+    </div>
+    <div class="modal-backdrop hidden"></div>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <p>&copy; 2025 RevoFun Gaming. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="/Games/rock-paper-scissors/rock-paper-scissors.js"></script>
+  </body>
+</html>
